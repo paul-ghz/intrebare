@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .b{
+            margin-top: -15%;
+        }
+        body{
+            background-image: url("Untitled\ design.png");
+            object-fit: cover;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+    <script>
+        let x=window.innerHeight;
+        let y=window.innerWidth;
+        const myImage = document.querySelector('body');
+        myImage.style.Height=x+"vh";
+        myImage.style.Width=x*(y/x)+"vw";
+        console.log(x);
+        console.log(y);
+    </script>
+</body>
+</html>
