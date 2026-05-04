@@ -6,29 +6,66 @@
     <title>Document</title>
 
     <style>
-        .b{
-            margin-top: -15%;
-        }
+        .text{
+            margin-top: 17%;
+            text-align: center;
+            font-size: 50px;
+        }   
         body{
             background-image: url("Untitled\ design.png");
             object-fit: cover;
             background-repeat: no-repeat;
             background-size: cover;
         }
+        .butoane{
+            margin-top: 5%;
+            display: grid;
+            grid-template-columns: 30% 20% 20% 30%;
+            text-align: center;
+        }
+        .da{
+
+            height: 175%;
+            width: 80%;
+            background-color: rgb(135, 247, 83)
+
+        }
+        .nu{
+
+            height: 175%;
+            width: 80%;
+            background-color: rgb(237, 49, 49)
+
+        }
+        .poza{
+            display: flex;
+            height: 300px;
+            width: 300px;
+            object-fit: contain;
+            margin-left: 37.5%;
+        }
     </style>
 </head>
 <body>
     
-
-
+<div class="text" id="text">Vrei sa fi iubita mea?</div>
+<div class="poza"><img src="poza.png"></div>
+<div class="butoane">
+    <div></div>
+    <div><button class="da" id="da" onclick="fct_da()">Da</button></div>
+    <div><button class="nu" id="nu" onclick="fct_nu()">Nu</button></div>
+    <div></div>
+</div>
     <script>
-        let x=window.innerHeight;
-        let y=window.innerWidth;
-        const myImage = document.querySelector('body');
-        myImage.style.Height=x+"vh";
-        myImage.style.Width=x*(y/x)+"vw";
-        console.log(x);
-        console.log(y);
+        let x=1;
+        function fct_nu(){
+            x=x+0.2;
+            let buton_da=document.getElementById("da");
+            buton_da.style.transform="scale("+x+")";
+        }
+        function fct_da(){
+            document.getElementById("text").innerHTML="Te iubesc!";
+        }
     </script>
 </body>
 </html>
